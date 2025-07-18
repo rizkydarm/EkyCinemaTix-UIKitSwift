@@ -11,7 +11,7 @@ on:
 # Jobs to run
 jobs:
   build:
-    name: Build
+    name: Build Debug
     runs-on: macos-latest  # Using latest macOS runner
 
     steps:
@@ -36,8 +36,8 @@ jobs:
         SKIP_LINT=1 \
           xcodebuild build \
           ARCHS=arm64 VALID_ARCHS=arm64 ONLY_ACTIVE_ARCH=NO \
-          -workspace EkyWeather.xcworkspace \
-          -scheme "EkyWeather" \
+          -workspace EkyCinemaTix.xcworkspace \
+          -scheme "EkyCinemaTix" \
           -configuration Debug \
           -destination 'platform=iOS Simulator,OS=17.4,name=iPhone 15' \
           CODE_SIGNING_ALLOWED=NO \
