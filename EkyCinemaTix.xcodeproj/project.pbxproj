@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FEAECD0FEE9F2633DD70B37D /* Pods_EkyCinemaTix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64734BAD11E6A5CD877307EE /* Pods_EkyCinemaTix.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		1C664D8185F8DEE70F748ABA /* Pods-EkyCinemaTix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EkyCinemaTix.release.xcconfig"; path = "Target Support Files/Pods-EkyCinemaTix/Pods-EkyCinemaTix.release.xcconfig"; sourceTree = "<group>"; };
 		25CA388C2E208A9E00A84720 /* EkyCinemaTix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EkyCinemaTix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6039CF84E9CBE291992DC968 /* Pods-EkyCinemaTix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EkyCinemaTix.debug.xcconfig"; path = "Target Support Files/Pods-EkyCinemaTix/Pods-EkyCinemaTix.debug.xcconfig"; sourceTree = "<group>"; };
+		64734BAD11E6A5CD877307EE /* Pods_EkyCinemaTix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EkyCinemaTix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAECD0FEE9F2633DD70B37D /* Pods_EkyCinemaTix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				25CA388E2E208A9E00A84720 /* EkyCinemaTix */,
 				25CA388D2E208A9E00A84720 /* Products */,
+				DC8C386DD54E7498C327E19F /* Pods */,
+				F03732EE90E4E96FB8FBDEF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DC8C386DD54E7498C327E19F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6039CF84E9CBE291992DC968 /* Pods-EkyCinemaTix.debug.xcconfig */,
+				1C664D8185F8DEE70F748ABA /* Pods-EkyCinemaTix.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F03732EE90E4E96FB8FBDEF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64734BAD11E6A5CD877307EE /* Pods_EkyCinemaTix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25CA389F2E208AA000A84720 /* Build configuration list for PBXNativeTarget "EkyCinemaTix" */;
 			buildPhases = (
+				4264F40F042A24DD18DB0880 /* [CP] Check Pods Manifest.lock */,
 				25CA38882E208A9E00A84720 /* Sources */,
 				25CA38892E208A9E00A84720 /* Frameworks */,
 				25CA388A2E208A9E00A84720 /* Resources */,
+				F0AB612D3158E035F330F445 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				25CA388E2E208A9E00A84720 /* EkyCinemaTix */,
 			);
 			name = EkyCinemaTix;
-			packageProductDependencies = (
-			);
 			productName = EkyCinemaTix;
 			productReference = 25CA388C2E208A9E00A84720 /* EkyCinemaTix.app */;
 			productType = "com.apple.product-type.application";
@@ -104,6 +131,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 25CA38832E208A9E00A84720;
 			minimizedProjectReferenceProxies = 1;
@@ -127,6 +155,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4264F40F042A24DD18DB0880 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EkyCinemaTix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0AB612D3158E035F330F445 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EkyCinemaTix/Pods-EkyCinemaTix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EkyCinemaTix/Pods-EkyCinemaTix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EkyCinemaTix/Pods-EkyCinemaTix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25CA38882E208A9E00A84720 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +210,7 @@
 /* Begin XCBuildConfiguration section */
 		25CA38A02E208AA000A84720 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6039CF84E9CBE291992DC968 /* Pods-EkyCinemaTix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -148,11 +219,15 @@
 				DEVELOPMENT_TEAM = QHWS6Y2JRB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EkyCinemaTix/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Eky CinemaTix";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -168,6 +243,7 @@
 		};
 		25CA38A12E208AA000A84720 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C664D8185F8DEE70F748ABA /* Pods-EkyCinemaTix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -176,11 +252,15 @@
 				DEVELOPMENT_TEAM = QHWS6Y2JRB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EkyCinemaTix/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Eky CinemaTix";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
